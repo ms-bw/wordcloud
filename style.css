@@ -1,0 +1,35 @@
+.bucketOne {
+  font-size: 10px;
+  }
+
+.bucketTwo {
+  font-size: 20px;
+  }
+
+.bucketThree {
+  font-size: 30px;
+    }
+
+.bucketFour {
+  font-size: 40px;
+    }
+
+.bucketFive {
+  font-size: 50px;
+    }
+
+.bucketSix {
+  font-size: 60px;
+}
+
+.green {
+  color: green;
+}
+
+.red {
+  color: red;
+}
+
+.grey {
+  color: grey;
+}
