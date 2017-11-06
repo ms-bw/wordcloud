@@ -1800,7 +1800,7 @@ topics.topics.forEach (
 // Creating new array called condensedDictionary containing the results of function (topic).
 var condensedDictionary = topics.topics.map (
   function (topic) {
-    return {"label":topic.label, "burst":topic.burst, "sentimentColour":topic.sentimentScore}
+    return {"label":topic.label, "burst":topic.burst, "sentimentScore":topic.sentimentScore}
   }
 )
 
@@ -1838,16 +1838,16 @@ var bucketDictionary = sortedDictionary.map (
     if (topic.burst >= 50) {
       bucket = "bucketSix"
     }
-    if (topic.sentimentScore <= 40) {
-      sentimentColour = "red"
+    if (topic.sentimentScore < 40) {
+      sentimentScore = "red"
     }
-    else if (topic.sentimentScore >= 60) {
-      sentimentColour = "green"
+    else if (topic.sentimentScore > 60) {
+      sentimentScore = "green"
     }
     else {
-      sentimentColour = "grey"
+      sentimentScore = "grey"
     }
-    return {"label":topic.label, "burst":topic.burst, "bucket":bucket, "sentimentColour":topic.sentimentScore}
+    return {"label":topic.label, "burst":topic.burst, "bucket":bucket, "sentimentScore":sentimentScore}
   }
 )
 console.log(bucketDictionary);
@@ -1856,6 +1856,8 @@ console.log(bucketDictionary);
 var container = document.getElementById("container")
 bucketDictionary.forEach (
   function (topic) {
-    container.innerHTML += '<p class= '+topic.bucket+'>'+topic.label+'</p>'
+    container.innerHTML += '<p class= "'+topic.bucket+' '+topic.sentimentScore+' ">'+topic.label+'</p>'
   }
 )
+
+// Debug using brekapoints in console
