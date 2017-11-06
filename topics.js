@@ -1853,7 +1853,7 @@ var bucketDictionary = sortedDictionary.map (
 console.log(bucketDictionary);
 
 // HTML and CSS elementID for text sizes
-var container = document.getElementById ("container")
+var container = document.getElementById("container")
 bucketDictionary.forEach (
   function (topic) {
     container.innerHTML += '<p class= '+topic.bucket+'>'+topic.label+'</p>'
