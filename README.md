@@ -1,6 +1,6 @@
 # How to WordCloud
 
-To view the wordcloud pull the wordcloud repo onto your system and load the **index.html** file in Chrome V6. 
+Pull the wordcloud repo and load **index.html** in your chosen browser. 
 
-To run the code locally navigate into the wordcloud folder using Terminal and type `node topics.js`
+To run the code locally navigate into the wordcloud folder and run `node topics.js`
 
